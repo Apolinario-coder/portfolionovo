@@ -6,25 +6,19 @@
   <title>Lucas Apolinario — Full-Stack Developer & Automation Specialist</title>
   <meta name="description" content="Portfolio de Lucas Apolinario — Full-Stack Developer & Automation Specialist. Aplicações web, automações, web scraping e ferramentas com IA." />
 
-  <!-- Favicon / Site Icon -->
   <link rel="icon" type="image/png" href="/img/logos/personagem.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/img/logos/personagem.png" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Montserrat:wght@800;900&display=swap" rel="stylesheet" />
 
-  <!-- Main CSS & JS -->
   <link rel="stylesheet" href="/src/style.css" />
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
 
-  <!-- ============================================
-       SVG FILTERS (Liquid Glass for Navbar)
-       ============================================ -->
   <svg style="position:absolute;width:0;height:0;">
     <defs>
       <filter id="glass-distortion" x="-10%" y="-10%" width="120%" height="120%">
@@ -46,9 +40,6 @@
     </defs>
   </svg>
 
-  <!-- ============================================
-       NAVBAR — Floating Liquid Glass Dock
-       ============================================ -->
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <div class="navbar-glass-bg">
@@ -68,7 +59,6 @@
           <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav-contact">Contato</a>
         </div>
         <div class="nav-actions">
-          <!-- Seletor de Idiomas (Igual ao Portfólio de Exemplo) -->
           <div class="lang-switcher">
             <button class="lang-btn" id="currentLangBtn" type="button" aria-label="Idioma">
               <img src="/img/flags/pt-br.jpg" alt="PT-BR" class="flag-icon current-flag">
@@ -132,7 +122,6 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu-links">
       <a href="#about" class="mobile-link" data-i18n="nav-about">Sobre</a>
@@ -143,11 +132,7 @@
     </div>
   </div>
 
-  <!-- ============================================
-       HERO SECTION
-       ============================================ -->
   <section class="hero-section" id="hero">
-    <!-- Manga Background -->
     <div class="hero-bg" id="hero-bg">
       <picture>
         <source media="(max-width: 768px)" srcset="/assets/manga-collage-parallax-mobile.jpg" />
@@ -190,11 +175,7 @@
     </div>
   </section>
 
-  <!-- ============================================
-       ABOUT SECTION
-       ============================================ -->
   <section class="about-section" id="about">
-    <!-- Floating Geometric Shapes -->
     <div class="geo-shapes about-shapes">
       <div class="geo-shape shape-circle" data-float-speed="3"></div>
       <div class="geo-shape shape-square" data-float-speed="4"></div>
@@ -225,7 +206,6 @@
           </p>
         </div>
 
-        <!-- Beyond Code Card -->
         <div class="beyond-code-card" data-reveal>
           <h3 class="beyond-code-title" data-i18n="beyond-title">BEYOND CODE</h3>
           <div class="beyond-code-grid">
@@ -278,7 +258,6 @@
         </div>
       </div>
 
-      <!-- Technologies -->
       <div class="tech-section" data-reveal>
         <h3 class="tech-title" data-i18n="tech-title">TECNOLOGIAS & FERRAMENTAS</h3>
         <div class="tech-badges">
@@ -309,9 +288,6 @@
     </div>
   </section>
 
-  <!-- ============================================
-       SERVICES SECTION (Light Sheet)
-       ============================================ -->
   <section class="services-section sheet-light" id="services">
     <div class="services-container">
       <div class="section-header">
@@ -347,16 +323,12 @@
     </div>
   </section>
 
-  <!-- ============================================
-       PROJECTS SECTION (Stacking Cards — Example Style)
-       ============================================ -->
   <section class="projects-section" id="projects">
     <div class="projects-container">
       <h2 class="block-text projects-title" data-i18n="projects-title">PROJETOS</h2>
 
       <div class="projects-list">
 
-        <!-- Projeto 01: AniLog -->
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-info">
@@ -386,7 +358,6 @@
           </div>
         </div>
 
-        <!-- Projeto 02: Apolinario Downloader -->
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-info">
@@ -415,7 +386,6 @@
           </div>
         </div>
 
-        <!-- Projeto 03: Saul Goodman -->
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-info">
@@ -443,7 +413,6 @@
           </div>
         </div>
 
-        <!-- Projeto 04: X Media Scraper -->
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-info">
@@ -472,7 +441,6 @@
           </div>
         </div>
 
-        <!-- Contador Extra de Projetos -->
         <div class="projects-counter-badge">
           <div class="counter-content">
             <span class="plus-icon">+</span>
@@ -485,15 +453,11 @@
       </div>
     </div>
 
-    <!-- Modal de Zoom (GSAP Flip) -->
     <div class="image-zoom-overlay" id="image-zoom-overlay">
       <button class="close-zoom-btn" id="zoom-close">×</button>
     </div>
   </section>
 
-  <!-- ============================================
-       FORMATIONS SECTION (Stacking Cards — Example Style)
-       ============================================ -->
   <section class="formations-section" id="formations">
     <div class="formations-container">
 
@@ -504,7 +468,6 @@
 
       <div class="formations-list">
 
-        <!-- Formação 01: ADS SENAI -->
         <div class="formation-card">
           <div class="formation-status">
             <span class="status-badge tecnologo" data-i18n="badge-tecnologo">Tecnólogo</span>
@@ -523,7 +486,6 @@
           </div>
         </div>
 
-        <!-- Formação 02: UNIP -->
         <div class="formation-card">
           <div class="formation-status">
             <span class="status-badge bacharel" data-i18n="badge-bacharel">Bacharel</span>
@@ -541,7 +503,6 @@
           </div>
         </div>
 
-        <!-- Formação 03: ETEC Mecatrônica -->
         <div class="formation-card">
           <div class="formation-status">
             <span class="status-badge tecnico" data-i18n="badge-tecnico">Técnico</span>
@@ -560,7 +521,6 @@
           </div>
         </div>
 
-        <!-- Formação 04: SENAI Python Data Science -->
         <div class="formation-card">
           <div class="formation-status">
             <span class="status-badge curso" data-i18n="badge-curso">Curso</span>
@@ -579,7 +539,6 @@
           </div>
         </div>
 
-        <!-- Formação 05: Curso em Vídeo Python 3 -->
         <div class="formation-card">
           <div class="formation-status">
             <span class="status-badge curso" data-i18n="badge-curso">Curso</span>
@@ -602,9 +561,6 @@
     </div>
   </section>
 
-  <!-- ============================================
-       QUOTE SECTION (Santos Dumont)
-       ============================================ -->
   <section class="quote-section" id="quote">
     <div class="quote-container">
       <div class="quote-card" data-reveal>
@@ -619,9 +575,6 @@
     </div>
   </section>
 
-  <!-- ============================================
-       CONTACT SECTION (Light Sheet)
-       ============================================ -->
   <section class="contact-section sheet-light" id="contact">
     <div class="contact-container">
       <div class="section-header">
@@ -660,11 +613,7 @@
     </div>
   </section>
 
-  <!-- ============================================
-       FOOTER
-       ============================================ -->
   <footer class="footer-section" id="footer">
-    <!-- Floating Geometric Shapes -->
     <div class="geo-shapes footer-shapes">
       <div class="geo-shape shape-circle" data-float-speed="2.5"></div>
       <div class="geo-shape shape-square" data-float-speed="3"></div>
@@ -673,7 +622,6 @@
     </div>
 
     <div class="footer-container">
-      <!-- Redes Sociais -->
       <div class="footer-social-area">
         <h4 class="social-area-title" data-i18n="social-title">Me encontre nas redes</h4>
         <div class="social-icons">
