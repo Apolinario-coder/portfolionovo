@@ -14,9 +14,9 @@ export function initFooter() {
   if (socialArea) {
     const socialTl = gsap.timeline({
       scrollTrigger: {
-        trigger: socialArea,
-        start: 'top 90%',
-        toggleActions: 'play reverse play reverse',
+        trigger: section,
+        start: 'top 95%',
+        once: true,
       },
     });
 

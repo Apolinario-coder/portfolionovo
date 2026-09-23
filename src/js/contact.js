@@ -13,8 +13,8 @@ export function initContact() {
   const title = section.querySelector('.outline-text');
   if (title) {
     ScrollTrigger.create({
-      trigger: title,
-      start: 'top 60%',
+      trigger: section,
+      start: 'top 85%',
       onEnter: () => title.classList.add('reveal'),
       onLeaveBack: () => title.classList.remove('reveal'),
     });
@@ -24,16 +24,16 @@ export function initContact() {
   const grid = section.querySelector('.contact-grid');
   if (grid) {
     gsap.fromTo(grid,
-      { y: 40, opacity: 0 },
+      { y: 30, opacity: 0 },
       {
         y: 0,
         opacity: 1,
         duration: 0.8,
         ease: 'power3.out',
         scrollTrigger: {
-          trigger: grid,
-          start: 'top 80%',
-          toggleActions: 'play reverse play reverse',
+          trigger: section,
+          start: 'top 85%',
+          once: true,
         },
       }
     );
@@ -43,17 +43,17 @@ export function initContact() {
   const links = section.querySelectorAll('.contact-link');
   if (links.length > 0) {
     gsap.fromTo(links,
-      { x: -30, opacity: 0 },
+      { x: -20, opacity: 0 },
       {
         x: 0,
         opacity: 1,
         duration: 0.6,
-        stagger: 0.12,
+        stagger: 0.1,
         ease: 'back.out(1.5)',
         scrollTrigger: {
-          trigger: links[0],
-          start: 'top 85%',
-          toggleActions: 'play reverse play reverse',
+          trigger: section,
+          start: 'top 80%',
+          once: true,
         },
       }
     );
@@ -70,9 +70,9 @@ export function initContact() {
         duration: 0.7,
         ease: 'back.out(2)',
         scrollTrigger: {
-          trigger: whatsappBtn,
-          start: 'top 85%',
-          toggleActions: 'play reverse play reverse',
+          trigger: section,
+          start: 'top 80%',
+          once: true,
         },
       }
     );

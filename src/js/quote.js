@@ -16,8 +16,8 @@ export function initQuote() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: card,
-      start: 'top 80%',
-      toggleActions: 'play reverse play reverse',
+      start: 'top 85%',
+      once: true,
     },
   });
 

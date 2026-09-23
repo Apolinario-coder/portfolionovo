@@ -1,5 +1,6 @@
 /* src/js/i18n.js */
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export function initI18n() {
   const langBtn = document.getElementById('currentLangBtn');
@@ -1408,6 +1409,11 @@ export function initI18n() {
         }
       }
     });
+
+    // Atualiza todos os triggers do GSAP com as novas alturas dos textos
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, isInitialLoad ? 80 : 650);
   }
 
   const langSwitcher = document.querySelector('.lang-switcher');
