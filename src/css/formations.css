@@ -1,0 +1,295 @@
+/* ============================================
+   FORMATIONS SECTION — Stacking Cards (Example Style)
+   ============================================ */
+
+.formations-section {
+  position: relative;
+  z-index: 12;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  padding: 120px 20px 0;
+  min-height: 100vh;
+  border-radius: 60px 60px 0 0;
+  margin-top: -40px;
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.formations-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.formations-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.formations-title {
+  font-family: var(--font-accent);
+  font-weight: 900;
+  font-size: clamp(3rem, 10vw, 7rem);
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+  transition: color 1s ease, -webkit-text-stroke 1s ease;
+  margin: 0 0 15px 0;
+}
+
+.formations-title.reveal {
+  color: #ffffff;
+  -webkit-text-stroke: 2px transparent;
+}
+
+.formations-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* --- Cards List --- */
+.formations-list {
+  display: block;
+  padding-bottom: 10vh;
+}
+
+/* --- Stacking Cards --- */
+.formation-card {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: var(--bg-main);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.formation-card:last-child {
+  margin-bottom: 0;
+}
+
+.formation-card:nth-child(1) { top: 100px; z-index: 1; }
+.formation-card:nth-child(2) { top: 120px; z-index: 2; }
+.formation-card:nth-child(3) { top: 140px; z-index: 3; }
+.formation-card:nth-child(4) { top: 160px; z-index: 4; }
+.formation-card:nth-child(5) { top: 180px; z-index: 5; }
+
+.formation-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* --- Status Badge --- */
+.formation-status {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.status-badge.in-progress {
+  background-color: rgba(100, 108, 255, 0.15);
+  color: #646cff;
+  border: 1px solid rgba(100, 108, 255, 0.4);
+}
+
+.status-badge.completed {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.status-badge.presencial {
+  background-color: rgba(255, 159, 67, 0.12);
+  color: #ff9f43;
+  border: 1px solid rgba(255, 159, 67, 0.35);
+}
+
+.status-badge.online {
+  background-color: rgba(58, 240, 255, 0.1);
+  color: #3af0ff;
+  border: 1px solid rgba(58, 240, 255, 0.3);
+}
+
+.status-badge.tecnologo {
+  background-color: rgba(255, 58, 58, 0.12);
+  color: #ff5252;
+  border: 1px solid rgba(255, 58, 58, 0.35);
+}
+
+.status-badge.bacharel {
+  background-color: rgba(165, 94, 234, 0.15);
+  color: #c56cf0;
+  border: 1px solid rgba(165, 94, 234, 0.35);
+}
+
+.status-badge.tecnico {
+  background-color: rgba(254, 202, 87, 0.12);
+  color: #feca57;
+  border: 1px solid rgba(254, 202, 87, 0.35);
+}
+
+.status-badge.curso {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- Content --- */
+.formation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  width: 100%;
+}
+
+.formation-logo-wrapper {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.formation-logo {
+  max-height: 85px;
+  max-width: 260px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: .85;
+  filter: grayscale(100%) brightness(200%);
+  transition: filter .3s ease, opacity .3s ease, transform .3s ease;
+}
+
+.formation-card:hover .formation-logo {
+  filter: grayscale(0%) brightness(100%);
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.formation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formation-name {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0;
+  color: #ffffff;
+}
+
+.formation-institution {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: #cccccc;
+  font-weight: 600;
+  margin: 0;
+}
+
+.formation-date {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #888888;
+  margin: 0;
+}
+
+.formation-date span {
+  opacity: 0;
+  display: inline;
+}
+
+/* --- Social Area --- */
+.formations-social-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+  background-color: var(--bg-main);
+  padding-top: 100px;
+  padding-bottom: 120px;
+  margin-top: -30vh;
+}
+
+.social-area-title {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  color: var(--accent);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .formations-section {
+    border-radius: 40px 40px 0 0;
+    padding: 80px 20px;
+  }
+
+  .formation-card {
+    padding: 30px 20px;
+    gap: 20px;
+    border-radius: 24px;
+  }
+
+  .formation-name {
+    font-size: 1.5rem;
+  }
+
+  .formation-card:nth-child(1) { top: 80px; }
+  .formation-card:nth-child(2) { top: 100px; }
+  .formation-card:nth-child(3) { top: 120px; }
+  .formation-card:nth-child(4) { top: 140px; }
+  .formation-card:nth-child(5) { top: 160px; }
+}

@@ -1,0 +1,86 @@
+/* ============================================
+   QUOTE SECTION — Santos Dumont Quote Card
+   ============================================ */
+
+.quote-section {
+  position: relative;
+  background: var(--bg-main);
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.quote-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  padding: 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0; /* Revealed by GSAP ScrollTrigger */
+}
+
+.quote-image {
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 25px rgba(255, 58, 58, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.quote-text p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.quote-text cite {
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 80px 0;
+  }
+
+  .quote-card {
+    padding: 32px 24px;
+    gap: 20px;
+  }
+
+  .quote-image {
+    width: 110px;
+    height: 110px;
+  }
+}

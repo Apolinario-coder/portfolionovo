@@ -1,0 +1,203 @@
+/* ============================================
+   ABOUT SECTION — Dark Sticky Background & Bio
+   ============================================ */
+
+.about-section {
+  position: relative;
+  background: var(--bg-main);
+  padding: 120px 0 160px;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative;
+  z-index: 1;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-paragraph {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  opacity: 0;
+}
+
+/* Beyond Code Glass Card */
+.beyond-code-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.3s var(--transition-smooth),
+              box-shadow 0.3s var(--transition-smooth);
+}
+
+.beyond-code-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.beyond-code-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.beyond-code-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.beyond-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.beyond-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: rgba(255, 58, 58, 0.08);
+  border: 1px solid rgba(255, 58, 58, 0.2);
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.beyond-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.beyond-item:hover .beyond-icon {
+  transform: scale(1.1);
+  background: rgba(255, 58, 58, 0.18);
+  border-color: var(--accent);
+}
+
+.beyond-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.beyond-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Technologies & Tools Section */
+.tech-section {
+  opacity: 0;
+}
+
+.tech-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  transition: all 0.3s var(--transition-smooth, cubic-bezier(0.22, 1, 0.36, 1));
+  cursor: default;
+}
+
+.tech-badge:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(255, 58, 58, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Badges de Neurodiversidade na Seção About */
+.about-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: rgba(255, 58, 58, 0.08);
+  border: 1px solid rgba(255, 58, 58, 0.28);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.about-badge:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 58, 58, 0.16);
+  border-color: var(--accent);
+}
+
+/* ============================================
+   RESPONSIVE — About Section
+   ============================================ */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 0 120px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .beyond-code-card {
+    padding: 24px;
+  }
+}

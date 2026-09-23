@@ -1,0 +1,12 @@
+/* Main CSS — Import all modules */
+@import './css/base.css';
+@import './css/navbar.css';
+@import './css/hero.css';
+@import './css/about.css';
+@import './css/services.css';
+@import './css/projects.css';
+@import './css/contact.css';
+@import './css/formations.css';
+@import './css/quote.css';
+@import './css/footer.css';
+@import './css/react-bits.css';

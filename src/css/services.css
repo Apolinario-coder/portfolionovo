@@ -1,0 +1,100 @@
+/* ============================================
+   SERVICES SECTION — Elevated Dark Sheet
+   ============================================ */
+
+.services-section {
+  position: relative;
+  padding: 100px 0 120px;
+}
+
+.services-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.service-card {
+  position: relative;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: rgba(20, 20, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: border-color 0.3s var(--transition-smooth),
+              background-color 0.3s var(--transition-smooth),
+              transform 0.3s var(--transition-smooth);
+}
+
+.service-card:hover {
+  background-color: rgba(25, 25, 25, 0.85);
+  border-color: rgba(255, 58, 58, 0.25);
+  transform: translateY(-4px);
+}
+
+.service-number {
+  font-family: var(--font-accent);
+  font-weight: 900;
+  font-size: clamp(4rem, 8vw, 6rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.04);
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: color 0.3s var(--transition-smooth),
+              -webkit-text-stroke-color 0.3s var(--transition-smooth);
+}
+
+.service-card:hover .service-number {
+  color: rgba(255, 58, 58, 0.06);
+  -webkit-text-stroke-color: rgba(255, 58, 58, 0.25);
+}
+
+.service-number span {
+  display: inline-block;
+}
+
+.service-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.service-desc span {
+  opacity: 0;
+  display: inline;
+}
+
+/* ============================================
+   RESPONSIVE — Services Section
+   ============================================ */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 0 80px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-card {
+    padding: 28px 20px;
+  }
+}

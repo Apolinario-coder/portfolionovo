@@ -1,0 +1,9 @@
+/* React Bits Styling */
+
+/* Particles Layer */
+.hero-particles-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
