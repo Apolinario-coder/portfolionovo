@@ -324,48 +324,48 @@
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 999;
+  background: rgba(8, 8, 10, 0.96);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  z-index: 998;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-/* Counteract parent navbar transform & offset when mobile-menu is a direct child */
-.navbar > .mobile-menu {
-  top: -16px;
-  left: calc((100% - 100vw) / 2);
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  visibility: hidden;
 }
 
 .mobile-menu.active {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .mobile-menu-links {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
   text-align: center;
 }
 
 .mobile-link {
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: inline-block;
 }
 
 .mobile-link:hover,
-.mobile-link.active {
+.mobile-link:active {
   color: var(--accent);
+  transform: scale(1.06);
 }
 
 /* ============================================
@@ -376,10 +376,6 @@
   .navbar {
     top: 10px;
     width: 92%;
-  }
-
-  .navbar > .mobile-menu {
-    top: -10px;
   }
 
   .nav-links,

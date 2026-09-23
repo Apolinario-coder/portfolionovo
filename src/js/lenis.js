@@ -27,8 +27,8 @@ export function initLenis() {
 
   gsap.ticker.lagSmoothing(0);
 
-  // Handle anchor links with smooth scroll + navbar offset
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  // Handle desktop anchor links with smooth scroll + navbar offset (.mobile-link handled in navbar.js)
+  document.querySelectorAll('a[href^="#"]:not(.mobile-link)').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = anchor.getAttribute('href');

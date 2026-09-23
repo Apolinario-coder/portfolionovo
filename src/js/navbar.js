@@ -57,6 +57,12 @@ export function initNavbar(lenis) {
 
   // --- Mobile Menu ---
   if (hamburger && mobileMenu) {
+    const closeMobileMenu = () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      if (lenis) lenis.start();
+    };
+
     hamburger.addEventListener('click', () => {
       const isActive = hamburger.classList.toggle('active');
       mobileMenu.classList.toggle('active', isActive);
@@ -69,14 +75,50 @@ export function initNavbar(lenis) {
       }
     });
 
-    // Close menu on link click
+    // Close menu and navigate smoothly on link click
     mobileLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        if (lenis) lenis.start();
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // 1. Close menu & resume smooth scroll
+        closeMobileMenu();
+
+        // 2. Scroll to target section
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            setTimeout(() => {
+              if (lenis) {
+                lenis.scrollTo(targetEl, {
+                  offset: -70,
+                  duration: 1.2,
+                });
+              } else {
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 60);
+          }
+        }
       });
     });
+
+    // Close on clicking backdrop outside links
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close if logo is clicked while menu is open
+    const navLogo = document.querySelector('.nav-logo');
+    if (navLogo) {
+      navLogo.addEventListener('click', () => {
+        if (hamburger.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
+    }
   }
 
   // --- Entrance Animation ---
