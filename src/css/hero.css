@@ -66,62 +66,6 @@
   padding: 0 var(--container-padding);
 }
 
-/* Badges */
-.hero-badges {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 16px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Rainbow Animated Border Badge */
-.hero-badge.rainbow-border {
-  position: relative;
-  border: none;
-  background: var(--bg-main);
-  isolation: isolate;
-}
-
-.hero-badge.rainbow-border::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 50px;
-  background: conic-gradient(from var(--angle, 0deg), #ff3a3a, #ffcc00, #3af0ff, #ff3aff, #ff3a3a);
-  z-index: -2;
-  animation: rainbow-spin 3s linear infinite;
-}
-
-.hero-badge.rainbow-border::after {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  border-radius: 50px;
-  background: rgba(10, 10, 10, 0.9);
-  z-index: -1;
-}
-
-@keyframes rainbow-spin {
-  to {
-    --angle: 360deg;
-    transform: rotate(360deg);
-  }
-}
 
 /* Hero Typography */
 .hero-title {
@@ -210,9 +154,6 @@
     line-height: 0.96;
   }
 
-  .hero-badges {
-    gap: 8px;
-  }
 
   .scroll-indicator {
     bottom: 20px;
